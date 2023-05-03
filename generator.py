@@ -153,11 +153,14 @@ instrs = [add_person, add_relation, query_value, query_circle, query_block_sum,
           query_triple_sum, add_group, add_to_group, del_from_group, query_group_value_sum,
           query_group_age_var, modify_relation, query_best_acquaintance, query_couple_sum, add_message,
           send_message, query_social_value, query_received_messages]
-more_qts = [query_triple_sum] * 5
-instrs += more_qts
+# more_qts = [query_triple_sum] * 1
+# instrs += more_qts
 
 
 def makeInstrs(instrNum, fileName):
+    people.clear()
+    groups.clear()
+    messages.clear()
     with open(fileName, 'w') as f:
         for i in range(instrNum):
             print(instrs[ran_int(0, len(instrs) - 1)](), file=f)
@@ -173,4 +176,4 @@ def makeInputs(fileNum, instrNum):
 
 
 if __name__ == '__main__':
-    makeInputs(fileNum=20, instrNum=10000)
+    makeInputs(fileNum=100, instrNum=10000)

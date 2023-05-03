@@ -18,5 +18,5 @@ def run_single():
     comparator.compare(fileNum=fileNum)
 
 
-# run_single()
-run_iterate()
+run_single()
+# run_iterate()

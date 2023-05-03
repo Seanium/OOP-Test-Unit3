@@ -38,4 +38,4 @@ def compare(fileNum):
 
 
 if __name__ == '__main__':
-    compare(fileNum=20)
+    compare(fileNum=100)
