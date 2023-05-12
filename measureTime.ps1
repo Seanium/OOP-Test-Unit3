@@ -1,0 +1,1 @@
+Measure-Command {get-content input/point0.txt | java -jar jar/hw11.jar}
