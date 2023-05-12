@@ -14,9 +14,9 @@ def compare(fileNum):
 
         # run jar
         os.system(
-            f"java -jar 1.jar < input/point{i}.txt > output1/result{i}.txt")
+            f"java -jar jar/hw11.jar < input/point{i}.txt > output1/result{i}.txt")
         os.system(
-            f"java -jar 2.jar < input/point{i}.txt > output2/result{i}.txt")
+            f"java -jar jar/test.jar < input/point{i}.txt > output2/result{i}.txt")
 
         # open file
         with open(f"output1/result{i}.txt", 'r') as f1:
@@ -38,4 +38,4 @@ def compare(fileNum):
 
 
 if __name__ == '__main__':
-    compare(fileNum=100)
+    compare(fileNum=1)
