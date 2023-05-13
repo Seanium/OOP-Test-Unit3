@@ -1,7 +1,7 @@
 import generator
 import comparator
 
-fileNum = 100
+fileNum = 10
 instrNum = 10000
 iterateNum = 5
 

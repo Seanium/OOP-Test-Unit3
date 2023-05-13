@@ -9,8 +9,8 @@ INT_MIN = -2**31
 ID_MIN = 0
 ID_MAX = 9999
 
-P_ADD = 0.05
-P_EXIST = 0.95
+P_ADD = 0
+P_EXIST = 1
 
 people = set()
 groups = set()
@@ -63,7 +63,7 @@ def add_person(p=P_ADD):
     return instr
 
 
-def add_relation(p=P_ADD):
+def add_relation(p=P_EXIST):
     instr = "ar {id1} {id2} {value}".format(
         id1=ran_pid(p), id2=ran_pid(p), value=ran_int(1, 100))
     return instr
@@ -220,7 +220,9 @@ instrs_hw11 = [add_red_envelope_message, add_notice_message, clear_notices, add_
                store_emoji_id, query_popularity, delete_cold_emoji, query_money, query_least_moment]
 
 instrs_qlm = [add_person, add_relation, modify_relation, query_least_moment]
-
+more_ar = [add_relation] * 5
+more_qlm = [query_least_moment] * 5
+instrs_qlm = instrs_qlm + more_ar + more_qlm
 instrs = instrs_qlm
 
 # instrs = instrs_hw10 + instrs_hw11
@@ -249,4 +251,4 @@ def makeInputs(fileNum, instrNum):
 
 
 if __name__ == '__main__':
-    makeInputs(fileNum=100, instrNum=10000)
+    makeInputs(fileNum=10, instrNum=10000)
